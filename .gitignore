@@ -1,2 +1,6 @@
 *.sln
 *.userprefs
+*.csproj
+
+*/bin/
+*/obj/
