@@ -2,7 +2,7 @@
 using System;
 using CSElectronicTools.Electronic;
 
-namespace CSElectronicTools.Electronic.Test
+namespace CSElectronicTools.Test.Electronic
 {
     [TestFixture()]
     public class NoiseTest
