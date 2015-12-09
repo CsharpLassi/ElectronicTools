@@ -2,52 +2,50 @@
 
 namespace CSElectronicTools
 {
-    public class Vector : IVector
+    public class CylinderVector : IVector
     {
-        public double X
-        {
+        public double Rho {
             get;
             set;
         }
 
-        public double Y
-        {
+        public double Phi {
             get;
             set;
         }
 
-        public double Z
-        {
+        public double Z {
             get;
             set;
         }
 
         public bool IsLocalVector
         {
-            get{ return true; }
+            get{ return Phi == 0; }
         }
 
-        public Vector()
+        public CylinderVector ()
         {
+
         }
 
-        public Vector(double x, double y, double z)
+        public CylinderVector (double rho, double phi, double z)
         {
-            X = x;
-            Y = y;
+            Rho = rho;
+            Phi = phi;
             Z = z;
         }
 
         public double SqrtLength()
         {
-            return X * X + Y * Y + Z * Z;
+            return Rho * Rho + Z * Z;
         }
 
         public double Length()
         {
             return Math.Sqrt(SqrtLength());
         }
-
+            
     }
 }
 
