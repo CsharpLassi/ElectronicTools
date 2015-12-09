@@ -23,6 +23,19 @@ namespace CSElectronicTools.Test
             Assert.IsTrue(vec.IsLocalVector);
         }
 
+        [Test()]
+        public void ToVectorTest()
+        {
+            var vec = new CylinderVector(Math.Sqrt(2),Math.PI/4,1);
+            var convvec = vec.ToVector();
+
+            Assert.AreEqual(convvec.X, 1, 0.1);
+            Assert.AreEqual(convvec.Y, 1, 0.1);
+            Assert.AreEqual(convvec.Z, vec.Z, 0.1);
+
+
+        }
+
     }
 }
 

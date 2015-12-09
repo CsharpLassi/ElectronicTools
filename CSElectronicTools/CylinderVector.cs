@@ -45,6 +45,14 @@ namespace CSElectronicTools
         {
             return Math.Sqrt(SqrtLength());
         }
+
+        public Vector ToVector()
+        {
+            double x = Rho * Math.Cos(Phi);
+            double y = Rho * Math.Sin(Phi);
+
+            return new Vector(x,y,this.Z);
+        }
             
     }
 }

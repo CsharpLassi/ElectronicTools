@@ -48,6 +48,14 @@ namespace CSElectronicTools
             return Math.Sqrt(SqrtLength());
         }
 
+        public CylinderVector ToCylinderVector()
+        {
+            double rho = Math.Sqrt(X * X + Y * Y);
+            double phi = Math.Atan2(Y, X);
+
+            return new CylinderVector(rho, phi, Z);
+        }
+
     }
 }
 
