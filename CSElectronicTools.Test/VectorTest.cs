@@ -29,6 +29,13 @@ namespace CSElectronicTools.Test
             Assert.AreEqual(convvec.Rho, Math.Sqrt(2), 0.1);
             Assert.AreEqual(convvec.Phi, Math.PI/4, 0.1);
             Assert.AreEqual(convvec.Z, vec.Z, 0.1);
+
+            vec = new Vector(1,-1,1);
+            convvec = vec.ToCylinderVector();
+
+            Assert.AreEqual(convvec.Rho, Math.Sqrt(2), 0.1);
+            Assert.AreEqual(convvec.Phi, -Math.PI/4, 0.1);
+            Assert.AreEqual(convvec.Z, vec.Z, 0.1);
         }
     }
 }
