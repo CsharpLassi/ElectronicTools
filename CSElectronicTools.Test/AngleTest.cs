@@ -10,10 +10,10 @@ namespace CSElectronicTools.Test
         public void CreateTest()
         {
             Angle ang = Math.PI;
-            Assert.AreEqual(ang.Value, Math.PI, 0.1);
+            Assert.AreEqual(Math.PI,ang.Value,  0.1);
 
             double angvalue = ang;
-            Assert.AreEqual(angvalue, Math.PI, 0.1);
+            Assert.AreEqual(Math.PI,angvalue,  0.1);
 
 
         }

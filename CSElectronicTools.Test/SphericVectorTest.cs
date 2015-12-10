@@ -29,9 +29,9 @@ namespace CSElectronicTools.Test
             var vec = new SphericVector(1,Math.PI/2,Math.PI/2);
             var convvec = vec.ToVector();
 
-            Assert.AreEqual(convvec.X, 0, 0.1);
-            Assert.AreEqual(convvec.Y, 0, 0.1);
-            Assert.AreEqual(convvec.Z, 1, 0.1);
+            Assert.AreEqual(0,convvec.X, 0.1);
+            Assert.AreEqual(0,convvec.Y, 0.1);
+            Assert.AreEqual(1,convvec.Z, 0.1);
         }
     }
 }

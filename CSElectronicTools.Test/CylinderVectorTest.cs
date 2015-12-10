@@ -10,7 +10,7 @@ namespace CSElectronicTools.Test
         public void LenghtTest()
         {
             var vec = new CylinderVector(1,1,1);
-            Assert.AreEqual(vec.Length(), Math.Sqrt(2), 0.1);
+            Assert.AreEqual(Math.Sqrt(2),vec.Length(), 0.1);
         }
 
         [Test()]
@@ -29,23 +29,23 @@ namespace CSElectronicTools.Test
             var vec = new CylinderVector(Math.Sqrt(2),Math.PI/4,1);
             var convvec = vec.ToVector();
 
-            Assert.AreEqual(convvec.X, 1, 0.1);
-            Assert.AreEqual(convvec.Y, 1, 0.1);
-            Assert.AreEqual(convvec.Z, vec.Z, 0.1);
+            Assert.AreEqual(1,convvec.X, 0.1);
+            Assert.AreEqual(1,convvec.Y, 0.1);
+            Assert.AreEqual(vec.Z,convvec.Z, 0.1);
 
             vec = new CylinderVector(Math.Sqrt(1),Math.PI/2,1);
             convvec = vec.ToVector();
 
-            Assert.AreEqual(convvec.X, 0, 0.1);
-            Assert.AreEqual(convvec.Y, 1, 0.1);
-            Assert.AreEqual(convvec.Z, vec.Z, 0.1);
+            Assert.AreEqual(0,convvec.X,  0.1);
+            Assert.AreEqual(1,convvec.Y,  0.1);
+            Assert.AreEqual(vec.Z,convvec.Z,  0.1);
 
             vec = new CylinderVector(Math.Sqrt(1),-Math.PI/2,1);
             convvec = vec.ToVector();
 
-            Assert.AreEqual(convvec.X, 0, 0.1);
-            Assert.AreEqual(convvec.Y, -1, 0.1);
-            Assert.AreEqual(convvec.Z, vec.Z, 0.1);
+            Assert.AreEqual(0,convvec.X,  0.1);
+            Assert.AreEqual(-1,convvec.Y,  0.1);
+            Assert.AreEqual(vec.Z,convvec.Z,  0.1);
 
 
         }

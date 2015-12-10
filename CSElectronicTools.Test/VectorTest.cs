@@ -26,16 +26,16 @@ namespace CSElectronicTools.Test
             Vector vec = new Vector(1,1,1);
             var convvec = vec.ToCylinderVector();
 
-            Assert.AreEqual(convvec.Rho, Math.Sqrt(2), 0.1);
-            Assert.AreEqual(convvec.Phi, Math.PI/4, 0.1);
-            Assert.AreEqual(convvec.Z, vec.Z, 0.1);
+            Assert.AreEqual(Math.Sqrt(2),convvec.Rho , 0.1);
+            Assert.AreEqual(Math.PI/4,convvec.Phi, 0.1);
+            Assert.AreEqual(vec.Z,convvec.Z, 0.1);
 
             vec = new Vector(1,-1,1);
             convvec = vec.ToCylinderVector();
 
-            Assert.AreEqual(convvec.Rho, Math.Sqrt(2), 0.1);
-            Assert.AreEqual(convvec.Phi, -Math.PI/4, 0.1);
-            Assert.AreEqual(convvec.Z, vec.Z, 0.1);
+            Assert.AreEqual(Math.Sqrt(2),convvec.Rho, 0.1);
+            Assert.AreEqual(-Math.PI/4,convvec.Phi, 0.1);
+            Assert.AreEqual(vec.Z,convvec.Z, 0.1);
         }
 
         [Test()]
@@ -57,9 +57,9 @@ namespace CSElectronicTools.Test
 
             Vector v3 = v1 + v2;
 
-            Assert.AreEqual(v3.X, 2 , 0.1);
-            Assert.AreEqual(v3.Y, 4, 0.1);
-            Assert.AreEqual(v3.Z, 7, 0.1);
+            Assert.AreEqual(2,v3.X, 0.1);
+            Assert.AreEqual(4,v3.Y, 0.1);
+            Assert.AreEqual(7,v3.Z, 0.1);
         }
 
         [Test()]
@@ -70,9 +70,9 @@ namespace CSElectronicTools.Test
 
             Vector v3 = v1 - v2;
 
-            Assert.AreEqual(v3.X, 0, 0.1);
-            Assert.AreEqual(v3.Y, 3, 0.1);
-            Assert.AreEqual(v3.Z, 1, 0.1);
+            Assert.AreEqual(0,v3.X, 0.1);
+            Assert.AreEqual(3,v3.Y, 0.1);
+            Assert.AreEqual(1,v3.Z, 0.1);
         }
 
         [Test()]
@@ -84,13 +84,13 @@ namespace CSElectronicTools.Test
             Vector v3 = v1 * v2;
             Vector v4 = v1 * 2;
 
-            Assert.AreEqual(v3.X, 3, 0.1);
-            Assert.AreEqual(v3.Y, 4, 0.1);
-            Assert.AreEqual(v3.Z, 8, 0.1);
+            Assert.AreEqual(3,v3.X, 0.1);
+            Assert.AreEqual(4,v3.Y, 0.1);
+            Assert.AreEqual(8,v3.Z, 0.1);
 
-            Assert.AreEqual(v4.X, 2, 0.1);
-            Assert.AreEqual(v4.Y, 4, 0.1);
-            Assert.AreEqual(v4.Z, 16, 0.1);
+            Assert.AreEqual(2,v4.X, 0.1);
+            Assert.AreEqual(4,v4.Y, 0.1);
+            Assert.AreEqual(16,v4.Z, 0.1);
         }
 
         [Test()]
@@ -102,13 +102,13 @@ namespace CSElectronicTools.Test
             Vector v3 = v1 / v2;
             Vector v4 = v1 / 2;
 
-            Assert.AreEqual(v3.X, 0.3, 0.1);
-            Assert.AreEqual(v3.Y, 1, 0.1);
-            Assert.AreEqual(v3.Z, 8, 0.1);
+            Assert.AreEqual(0.3,v3.X, 0.1);
+            Assert.AreEqual(1,v3.Y, 0.1);
+            Assert.AreEqual(8,v3.Z, 0.1);
 
-            Assert.AreEqual(v4.X, 0.5, 0.1);
-            Assert.AreEqual(v4.Y, 1, 0.1);
-            Assert.AreEqual(v4.Z, 4, 0.1);
+            Assert.AreEqual(0.5,v4.X, 0.1);
+            Assert.AreEqual(1,v4.Y,  0.1);
+            Assert.AreEqual(4,v4.Z,  0.1);
         }
     }
 }
