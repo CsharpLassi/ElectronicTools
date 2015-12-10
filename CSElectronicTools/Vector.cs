@@ -56,6 +56,15 @@ namespace CSElectronicTools
             return new CylinderVector(rho, phi, Z);
         }
 
+        public PolarVector ToPolarVector()
+        {
+            double rho = Math.Sqrt(X * X + Y * Y + Z * Z);
+            double phi = Math.Atan2(Y, X);
+            double theta = Math.Atan2(Z, X);
+
+            return new PolarVector(rho, phi, theta);
+        }
+
     }
 }
 

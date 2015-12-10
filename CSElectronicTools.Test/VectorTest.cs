@@ -37,6 +37,19 @@ namespace CSElectronicTools.Test
             Assert.AreEqual(convvec.Phi, -Math.PI/4, 0.1);
             Assert.AreEqual(convvec.Z, vec.Z, 0.1);
         }
+
+        [Test()]
+        public void ToPolarVectorTest()
+        {
+            Vector vec = new Vector(1,1,1);
+            var convvec = vec.ToPolarVector();
+
+            Assert.AreEqual(convvec.R, Math.Sqrt(3), 0.1);
+            Assert.AreEqual(convvec.Phi, Math.PI/4, 0.1);
+            Assert.AreEqual(convvec.Theta, Math.PI/4, 0.1);
+
+           
+        }
     }
 }
 

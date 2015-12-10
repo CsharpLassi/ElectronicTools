@@ -26,7 +26,8 @@ namespace CSElectronicTools
 
         public CylinderVector ()
         {
-
+            Rho = 0;
+            Phi = 0;
         }
 
         public CylinderVector (Distance rho, Angle phi, double z)
