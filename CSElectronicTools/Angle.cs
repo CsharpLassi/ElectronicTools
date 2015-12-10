@@ -2,19 +2,14 @@
 
 namespace CSElectronicTools
 {
-    public class Angle
+    public class Angle : ScalarValue
     {
-        public double Value
-        {
-            get;
-            set;
-        }
-
         public Angle()
         {
         }
 
         public Angle(double value)
+            : base(value)
         {
             Value = value;
         }
