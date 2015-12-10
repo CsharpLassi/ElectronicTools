@@ -58,11 +58,11 @@ namespace CSElectronicTools
 
         public SphericVector ToPolarVector()
         {
-            double rho = Math.Sqrt(X * X + Y * Y + Z * Z);
+            double r = Length();
             double phi = Math.Atan2(Y, X);
-            double theta = Math.Atan2(Z, X);
+            double theta = Math.Acos(Z / r);
 
-            return new SphericVector(rho, phi, theta);
+            return new SphericVector(r, phi, theta);
         }
 
 
