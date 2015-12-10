@@ -4,7 +4,7 @@ namespace CSElectronicTools
 {
     public class CylinderVector : IVector
     {
-        public double Rho {
+        public Distance Rho {
             get;
             set;
         }
@@ -29,19 +29,19 @@ namespace CSElectronicTools
 
         }
 
-        public CylinderVector (double rho, Angle phi, double z)
+        public CylinderVector (Distance rho, Angle phi, double z)
         {
             Rho = rho;
             Phi = phi;
             Z = z;
         }
 
-        public double SqrtLength()
+        public Distance SqrtLength()
         {
             return Rho * Rho + Z * Z;
         }
 
-        public double Length()
+        public Distance Length()
         {
             return Math.Sqrt(SqrtLength());
         }

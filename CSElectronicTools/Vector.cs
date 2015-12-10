@@ -38,12 +38,12 @@ namespace CSElectronicTools
             Z = z;
         }
 
-        public double SqrtLength()
+        public Distance SqrtLength()
         {
             return X * X + Y * Y + Z * Z;
         }
 
-        public double Length()
+        public Distance Length()
         {
             return Math.Sqrt(SqrtLength());
         }

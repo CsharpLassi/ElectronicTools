@@ -6,7 +6,7 @@ namespace CSElectronicTools
     {
         bool IsLocalVector{ get; }
 
-        double Length();
+        Distance Length();
     }
 }
 
