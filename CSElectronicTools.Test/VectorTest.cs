@@ -47,8 +47,68 @@ namespace CSElectronicTools.Test
             Assert.AreEqual(convvec.R, Math.Sqrt(3), 0.1);
             Assert.AreEqual(convvec.Phi, Math.PI/4, 0.1);
             Assert.AreEqual(convvec.Theta, Math.PI/4, 0.1);
+        }
 
-           
+        [Test()]
+        public void AddOperationTest()
+        {
+            Vector v1 = new Vector(1, 2, 4);
+            Vector v2 = new Vector(1, 2, 3);
+
+            Vector v3 = v1 + v2;
+
+            Assert.AreEqual(v3.X, 2 , 0.1);
+            Assert.AreEqual(v3.Y, 4, 0.1);
+            Assert.AreEqual(v3.Z, 7, 0.1);
+        }
+
+        [Test()]
+        public void SubOperationTest()
+        {
+            Vector v1 = new Vector(1, 5, 4);
+            Vector v2 = new Vector(1, 2, 3);
+
+            Vector v3 = v1 - v2;
+
+            Assert.AreEqual(v3.X, 0, 0.1);
+            Assert.AreEqual(v3.Y, 3, 0.1);
+            Assert.AreEqual(v3.Z, 1, 0.1);
+        }
+
+        [Test()]
+        public void MulOperationTest()
+        {
+            Vector v1 = new Vector(1, 2, 8);
+            Vector v2 = new Vector(3, 2, 1);
+
+            Vector v3 = v1 * v2;
+            Vector v4 = v1 * 2;
+
+            Assert.AreEqual(v3.X, 3, 0.1);
+            Assert.AreEqual(v3.Y, 4, 0.1);
+            Assert.AreEqual(v3.Z, 8, 0.1);
+
+            Assert.AreEqual(v4.X, 2, 0.1);
+            Assert.AreEqual(v4.Y, 4, 0.1);
+            Assert.AreEqual(v4.Z, 16, 0.1);
+        }
+
+        [Test()]
+        public void DivOperationTest()
+        {
+            Vector v1 = new Vector(1, 2, 8);
+            Vector v2 = new Vector(3, 2, 1);
+
+            Vector v3 = v1 / v2;
+            Vector v4 = v1 / 2;
+
+            Assert.AreEqual(v3.X, 0.3, 0.1);
+            Assert.AreEqual(v3.Y, 1, 0.1);
+            Assert.AreEqual(v3.Z, 8, 0.1);
+
+            Assert.AreEqual(v4.X, 0.5, 0.1);
+            Assert.AreEqual(v4.Y, 1, 0.1);
+            Assert.AreEqual(v4.Z, 4, 0.1);
         }
     }
 }

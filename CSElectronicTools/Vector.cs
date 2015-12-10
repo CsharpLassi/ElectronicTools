@@ -65,6 +65,38 @@ namespace CSElectronicTools
             return new PolarVector(rho, phi, theta);
         }
 
+
+        public static Vector operator + (Vector v1 , Vector v2)
+        {
+            return new Vector(v1.X + v2.X, v1.Y + v2.Y, v1.Z + v2.Z);
+        }
+
+        public static Vector operator - (Vector v1 , Vector v2)
+        {
+            return new Vector(v1.X - v2.X, v1.Y - v2.Y, v1.Z - v2.Z);
+        }
+
+        public static Vector operator * (Vector v1 , Vector v2)
+        {
+            return new Vector(v1.X * v2.X, v1.Y * v2.Y, v1.Z * v2.Z);
+        }
+
+        public static Vector operator * (Vector v1 , ScalarValue sv)
+        {
+            return new Vector(v1.X * sv, v1.Y * sv, v1.Z * sv);
+        }
+
+        public static Vector operator / (Vector v1 , Vector v2)
+        {
+            return new Vector(v1.X / v2.X, v1.Y / v2.Y, v1.Z / v2.Z);
+        }
+
+        public static Vector operator / (Vector v1 , ScalarValue sv)
+        {
+            return new Vector(v1.X / sv, v1.Y / sv, v1.Z / sv);
+        }
+
+
     }
 }
 
