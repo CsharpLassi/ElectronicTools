@@ -2,7 +2,7 @@
 
 namespace CSElectronicTools
 {
-    public class PolarVector : IVector
+    public class SphericVector : IVector
     {
         public Distance R {
             get;
@@ -24,14 +24,14 @@ namespace CSElectronicTools
             get{ return Phi == 0 && Theta == 0; }
         }
             
-        public PolarVector()
+        public SphericVector()
         {
             R = 0;
             Phi = 0;
             Theta = 0;
         }
 
-        public PolarVector(Distance r, Angle phi, Angle theta)
+        public SphericVector(Distance r, Angle phi, Angle theta)
         {
             R = r;
             Phi = phi;
