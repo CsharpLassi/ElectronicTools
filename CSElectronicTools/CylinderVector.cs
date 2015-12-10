@@ -9,7 +9,7 @@ namespace CSElectronicTools
             set;
         }
 
-        public double Phi {
+        public Angle Phi {
             get;
             set;
         }
@@ -29,7 +29,7 @@ namespace CSElectronicTools
 
         }
 
-        public CylinderVector (double rho, double phi, double z)
+        public CylinderVector (double rho, Angle phi, double z)
         {
             Rho = rho;
             Phi = phi;
