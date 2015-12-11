@@ -65,6 +65,11 @@ namespace CSElectronicTools
             return new SphericVector(r, phi, theta);
         }
 
+        public static ScalarValue ScalarProduct(Vector v1, Vector v2)
+        {
+            return v1.X * v2.X + v1.Y * v2.Y + v1.Z * v2.Z; 
+        }
+
 
         public static Vector operator + (Vector v1 , Vector v2)
         {

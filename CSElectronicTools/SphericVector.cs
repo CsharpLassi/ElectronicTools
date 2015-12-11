@@ -43,6 +43,11 @@ namespace CSElectronicTools
             return R;
         }
 
+        public static ScalarValue ScalarProduct(SphericVector v1, SphericVector v2)
+        {
+            return Vector.ScalarProduct(v1.ToVector(), v2.ToVector());
+        }
+
         public Vector ToVector()
         {
             double x = R * Math.Cos(Phi) * Math.Cos(Theta);

@@ -33,6 +33,16 @@ namespace CSElectronicTools.Test
             Assert.AreEqual(0,convvec.Y, 0.1);
             Assert.AreEqual(1,convvec.Z, 0.1);
         }
+
+        [Test()]
+        public void ScalarProductTest()
+        {
+            SphericVector vec = new SphericVector(1, 1, 1);
+
+            var product = SphericVector.ScalarProduct(vec, vec);
+
+            Assert.AreEqual(1, product, 0.1);
+        }
     }
 }
 
