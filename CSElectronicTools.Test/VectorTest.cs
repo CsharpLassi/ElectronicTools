@@ -110,6 +110,16 @@ namespace CSElectronicTools.Test
             Assert.AreEqual(1,v4.Y,  0.1);
             Assert.AreEqual(4,v4.Z,  0.1);
         }
+
+        [Test()]
+        public void ScalarProductTest()
+        {
+            Vector vec = new Vector(1, 1, 1);
+
+            var product = Vector.ScalarProduct(vec, vec);
+
+            Assert.AreEqual(1, 1, 0.1);
+        }
     }
 }
 

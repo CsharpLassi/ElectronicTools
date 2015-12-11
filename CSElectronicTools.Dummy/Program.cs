@@ -3,14 +3,17 @@
 namespace CSElectronicTools.Dummy
 {
     class MainClass
-    {
+    { 
+       
         public static void Main(string[] args)
         {
-            Func<double,double> func = (x) => x - 2;
-            double result = 2;
-            double range = 0.1;
+            NVector v1 = new NVector(3);
+            v1.SetData(1, 2, 4);
 
-            double value = ZeroPoint.HalfRangeByIteration(func,10);
+            NVector v2 = new NVector(3);
+            v2.SetData(1, 2, 3);
+
+            NVector v3 = v1 + v2;
         }
     }
 }
