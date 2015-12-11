@@ -1,6 +1,11 @@
+#Datein
 *.sln
 *.userprefs
 *.csproj
 
+*~
+
+#Ordner
 */bin/
 */obj/
+bin/

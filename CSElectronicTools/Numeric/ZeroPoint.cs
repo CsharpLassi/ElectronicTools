@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CSElectronicTools
+namespace CSElectronicTools.Numeric
 {
     public static class ZeroPoint
     {
