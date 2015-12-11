@@ -43,9 +43,24 @@ namespace CSElectronicTools
             return R;
         }
 
+        public static implicit operator Vector(SphericVector vec)
+        {
+            return vec.ToVector();
+        }
+
+        public static ScalarValue ScalarProduct(Vector v2,SphericVector v1)
+        {
+            return Vector.ScalarProduct(v1, v2);
+        }
+
+        public static ScalarValue ScalarProduct(SphericVector v1, Vector v2)
+        {
+            return Vector.ScalarProduct(v1, v2);
+        }
+
         public static ScalarValue ScalarProduct(SphericVector v1, SphericVector v2)
         {
-            return Vector.ScalarProduct(v1.ToVector(), v2.ToVector());
+            return Vector.ScalarProduct(v1, v2);
         }
 
         public Vector ToVector()

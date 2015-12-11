@@ -50,6 +50,16 @@ namespace CSElectronicTools.Test
 
         }
 
+        [Test()]
+        public void ScalarProductTest()
+        {
+            CylinderVector vec = new CylinderVector(1, 1, 1);
+
+            var product = CylinderVector.ScalarProduct(vec, vec);
+
+            Assert.AreEqual(2, product, 0.1);
+        }
+
     }
 }
 
