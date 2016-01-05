@@ -49,6 +49,16 @@ namespace CSElectronicTools.Signal
 
             return result;
         }
+
+        public static ScalarValue[] AutoCorrelation(ScalarValue[] sig1)
+        {
+            return CrossCorrelation(sig1, sig1);
+        }
+
+        public static ScalarValue AutoCorrelation(ScalarValue[] sig1,ScalarValue[] sig2, ScalarValue dt)
+        {
+            return CrossCorrelation(sig1, sig1,dt);
+        }
     }
 }
 
