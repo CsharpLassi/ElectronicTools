@@ -14,8 +14,13 @@ namespace CSElectronicTools.Test
 
             double angvalue = ang;
             Assert.AreEqual(Math.PI,angvalue,  0.1);
+        }
 
-
+        [Test()]
+        public void NullTest()
+        {
+            Angle ang = 0;
+            Assert.IsTrue(ang == 0);
         }
     }
 }
