@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using CSElectronicTools.Numeric;
 using System;
 
 namespace CSElectronicTools.Test.Numeric
